@@ -7,6 +7,7 @@ let PIN_PHOTO = DigitalPin.P1;
 
 // INIT
 radio.setGroup(8);
+basic.showString("F");
 
 // VARIABLES
 let value = 0;
@@ -32,7 +33,7 @@ basic.forever(function () {
 })
 
 basic.forever(function () {
-    if (!value) {
+    if (value) {
         gateOpen();
     } else {
         gateClose();
